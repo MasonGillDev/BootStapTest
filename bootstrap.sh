@@ -14,4 +14,4 @@ cd /root/my-bootstraps || exit 1
 
 
 echo "Running Program..."
-python3 setup_python_app.py
+/root/my-bootstraps/venv/bin/python /root/my-bootstraps/setup_python_app.py
