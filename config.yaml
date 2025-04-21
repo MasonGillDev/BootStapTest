@@ -19,11 +19,11 @@ config:
       - python3-pip  # so we can pip3 install packages (python3-venv works too)
 
     runcmd:
-      # 1) Clone your Git repo into /root/my-bootstraps
+     
       - [ git, clone, "https://github.com/MasonGillDev/BootStapTest.git", "/root/my-bootstraps" ]
 
-      # 2) Ensure the script is executable (if not already)
+      
       - [ chmod, "+x", "/root/my-bootstraps/bootstrap.sh" ]
 
-      # 3) Run the script and capture logs
+      
       - [ bash, "-c", "/root/my-bootstraps/bootstrap.sh | tee -a /var/log/my-bootstrap.log" ]
