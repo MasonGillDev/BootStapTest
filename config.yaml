@@ -1,0 +1,19 @@
+name: MasonBootTest
+type: container
+profiles:
+  - default
+
+source:
+  type: image
+  mode: pull
+  protocol: simplestreams
+  server: https://cloud-images.ubuntu.com/releases
+  alias: "24.04"
+
+config:
+  user.user-data: |
+
+    #cloud-config
+    packages:
+      - git
+      - python3.12-venv
